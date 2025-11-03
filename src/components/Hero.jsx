@@ -4,6 +4,8 @@ import { Github, Linkedin, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+  const [showFallback, setShowFallback] = React.useState(false);
+
   return (
     <section className="relative min-h-[90vh] w-full overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* 3D Scene */}
@@ -73,19 +75,18 @@ const Hero = () => {
           className="mt-8"
         >
           <div className="relative h-28 w-28 overflow-hidden rounded-full border border-slate-700/60 shadow-lg shadow-slate-900/40">
-            <img
-              src="/profile.jpg"
-              alt="Owen Chen"
-              className="h-full w-full object-cover"
-              onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement;
-                target.style.display = 'none';
-                const parent = target.parentElement;
-                if (parent) {
-                  parent.innerHTML = `<div class='flex h-full w-full items-center justify-center bg-gradient-to-br from-cyan-600/30 via-slate-800 to-fuchsia-600/30 text-xl font-semibold text-slate-200'>OC</div>`;
-                }
-              }}
-            />
+            {showFallback ? (
+              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-cyan-600/30 via-slate-800 to-fuchsia-600/30 text-xl font-semibold text-slate-200">
+                OC
+              </div>
+            ) : (
+              <img
+                src="/profile.jpg"
+                alt="Owen Chen"
+                className="h-full w-full object-cover"
+                onError={() => setShowFallback(true)}
+              />
+            )}
           </div>
           <p className="mt-2 text-xs text-slate-400">Add /public/profile.jpg to show your photo</p>
         </motion.div>
