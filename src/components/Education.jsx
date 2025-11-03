@@ -1,5 +1,6 @@
 import React from 'react';
 import { GraduationCap, Calendar } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const schools = [
   {
@@ -19,17 +20,32 @@ const schools = [
 const Education = () => {
   return (
     <section id="education" className="relative mx-auto w-full max-w-5xl px-6 py-16">
-      <h2 className="text-2xl font-semibold text-white sm:text-3xl">Education</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5 }}
+        className="text-2xl font-semibold text-white sm:text-3xl"
+      >
+        Education
+      </motion.h2>
       <div className="mt-6 space-y-4">
-        {schools.map((s) => (
-          <div
+        {schools.map((s, i) => (
+          <motion.div
             key={s.school}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.45, delay: i * 0.05 }}
             className="rounded-xl border border-slate-800 bg-slate-900/50 p-5"
           >
             <div className="flex items-start gap-3">
-              <div className="rounded-lg bg-slate-800 p-2 text-cyan-300">
+              <motion.div
+                whileHover={{ rotate: -6 }}
+                className="rounded-lg bg-slate-800 p-2 text-cyan-300"
+              >
                 <GraduationCap size={20} />
-              </div>
+              </motion.div>
               <div className="flex-1">
                 <h3 className="text-base font-semibold text-white">{s.school}</h3>
                 <p className="text-sm text-slate-300">{s.degree}</p>
@@ -39,7 +55,7 @@ const Education = () => {
                 <p className="mt-2 text-sm text-slate-300">{s.details}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
