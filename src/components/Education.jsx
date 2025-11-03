@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 
 const schools = [
   {
-    school: 'University of Somewhere',
-    degree: 'B.S. in Computer Science',
-    period: '2019 – 2023',
-    details: 'Focused on human‑computer interaction, distributed systems, and product design.'
+    school: 'University of Illinois Urbana–Champaign',
+    degree: 'B.Sc. in Computer Science (expected)',
+    period: 'Aug 2025 — May 2029',
+    details: 'Incoming CS student with interests in AI/ML, alignment, and full-stack systems.'
   },
   {
-    school: 'Advanced Coursework',
-    degree: 'Machine Learning, Databases, UX Research',
-    period: 'Selected',
-    details: 'Project‑based learning with emphasis on practical, real‑world applications.'
+    school: 'Bayview Glen High School',
+    degree: 'High School Diploma',
+    period: 'Sep 2021 — Jun 2025',
+    details: 'GPA: 4.0 unweighted, 4.32 weighted'
   }
 ];
 
@@ -25,7 +25,7 @@ const Education = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
-        className="text-2xl font-semibold text-white sm:text-3xl"
+        className="font-mono text-2xl font-semibold uppercase tracking-widest text-white sm:text-3xl"
       >
         Education
       </motion.h2>
