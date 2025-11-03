@@ -1,5 +1,4 @@
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const projects = [
@@ -8,24 +7,18 @@ const projects = [
     description:
       'A 3D-enhanced personal site using Spline and motion-driven UI for a futuristic identity.',
     tech: ['React', 'Spline', 'Tailwind'],
-    github: '#',
-    demo: '#',
   },
   {
     title: 'Realtime Collab Notes',
     description:
       'A low-latency notes app with presence, comments, and conflict-free editing.',
     tech: ['React', 'WebSockets', 'CRDT'],
-    github: '#',
-    demo: '#',
   },
   {
     title: 'Fintech Dashboard',
     description:
       'Beautiful, responsive charts and risk insights with dark-mode first design.',
     tech: ['FastAPI', 'Postgres', 'Charts'],
-    github: '#',
-    demo: '#',
   },
 ];
 
@@ -50,37 +43,22 @@ const Projects = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.45, delay: i * 0.05 }}
             whileHover={{ y: -4 }}
-            className="group rounded-xl border border-slate-800 bg-slate-900/50 p-5 transition hover:border-cyan-500/40 hover:bg-slate-900"
+            className="group rounded-xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm transition hover:border-white/20 hover:bg-white/[0.06]"
           >
             <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-            <p className="mt-2 text-sm text-slate-300">{p.description}</p>
+            <p className="mt-2 text-sm text-zinc-300">{p.description}</p>
             <div className="mt-3 flex flex-wrap gap-2">
               {p.tech.map((t) => (
                 <span
                   key={t}
-                  className="rounded-full border border-slate-700 bg-slate-800/60 px-2 py-1 text-xs text-slate-300"
+                  className="rounded-full border border-white/10 bg-black/40 px-2 py-1 text-xs text-zinc-300"
                 >
                   {t}
                 </span>
               ))}
             </div>
-            <div className="mt-4 flex items-center gap-3">
-              <a
-                href={p.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm text-slate-300 transition hover:text-white"
-              >
-                <Github size={16} /> Code
-              </a>
-              <a
-                href={p.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm text-cyan-300 transition hover:text-cyan-200"
-              >
-                <ExternalLink size={16} /> Demo
-              </a>
+            <div className="mt-4 text-xs text-zinc-400">
+              Add links for live demos or repositories when ready.
             </div>
           </motion.div>
         ))}

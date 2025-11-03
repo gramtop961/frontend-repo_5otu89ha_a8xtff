@@ -1,23 +1,24 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
-import { Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Linkedin, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
   const [showFallback, setShowFallback] = React.useState(false);
 
   return (
-    <section className="relative min-h-[90vh] w-full overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-      {/* 3D Scene */}
+    <section className="relative min-h-[90vh] w-full overflow-hidden bg-black text-white">
+      {/* 3D Scene (full-cover) */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/qQUip0dJPqrrPryE/scene.splinecode"
+          scene="https://prod.spline.design/EQgEIs2r5cMbWroZ/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
 
-      {/* Iridescent gradient overlay that won't block 3D interactions */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.20),rgba(15,23,42,0)_60%)]" />
+      {/* Iridescent/mono gradient overlays that won't block 3D interactions */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.08),rgba(0,0,0,0)_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(168,85,247,0.08),rgba(0,0,0,0)_55%)]" />
 
       {/* Content */}
       <div className="relative mx-auto flex min-h-[90vh] max-w-6xl flex-col items-center justify-center px-6 text-center">
@@ -33,10 +34,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: 'easeOut', delay: 0.1 }}
-          className="mt-3 max-w-2xl text-base text-slate-300 sm:text-lg"
+          className="mt-3 max-w-2xl text-base text-zinc-300 sm:text-lg"
         >
-          Building modern, user-centric experiences at the intersection of design and engineering.
-          Passionate about performant web apps, delightful UI, and thoughtful systems.
+          Modern, monochrome aesthetics with a focus on clarity. I design and build performant web
+          experiences with thoughtful motion and precise details.
         </motion.p>
 
         <motion.div
@@ -46,23 +47,13 @@ const Hero = () => {
           className="mt-6 flex flex-wrap items-center justify-center gap-3"
         >
           <a
-            href="#"
+            href="https://www.linkedin.com/in/owen-chen-112382322/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-cyan-200 transition hover:bg-cyan-500/20 hover:shadow-[0_0_40px_-10px_rgba(34,211,238,0.45)]"
+            className="group inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-zinc-100 backdrop-blur-sm transition hover:bg-white/10 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.35)]"
           >
             <Linkedin size={18} />
             <span>LinkedIn</span>
-            <ExternalLink size={16} className="opacity-60 transition group-hover:opacity-100" />
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/60 px-4 py-2 text-slate-200 transition hover:bg-slate-800 hover:shadow-[0_0_40px_-12px_rgba(148,163,184,0.35)]"
-          >
-            <Github size={18} />
-            <span>GitHub</span>
             <ExternalLink size={16} className="opacity-60 transition group-hover:opacity-100" />
           </a>
         </motion.div>
@@ -74,9 +65,9 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.25 }}
           className="mt-8"
         >
-          <div className="relative h-28 w-28 overflow-hidden rounded-full border border-slate-700/60 shadow-lg shadow-slate-900/40">
+          <div className="relative h-28 w-28 overflow-hidden rounded-full border border-white/15 bg-white/5 shadow-lg shadow-black/50 backdrop-blur-sm">
             {showFallback ? (
-              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-cyan-600/30 via-slate-800 to-fuchsia-600/30 text-xl font-semibold text-slate-200">
+              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-white/10 via-black to-white/10 text-xl font-semibold text-zinc-200">
                 OC
               </div>
             ) : (
@@ -88,7 +79,7 @@ const Hero = () => {
               />
             )}
           </div>
-          <p className="mt-2 text-xs text-slate-400">Add /public/profile.jpg to show your photo</p>
+          <p className="mt-2 text-xs text-zinc-400">Add /public/profile.jpg to show your photo</p>
         </motion.div>
       </div>
     </section>
