@@ -25,7 +25,7 @@ const Education = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
-        className="font-mono text-2xl font-semibold uppercase tracking-widest text-white sm:text-3xl"
+        className="font-sans text-2xl font-black uppercase tracking-wider text-white sm:text-3xl"
       >
         Education
       </motion.h2>
@@ -46,7 +46,7 @@ const Education = () => {
                 <GraduationCap size={18} />
               </motion.div>
               <div className="flex-1">
-                <h3 className="text-base font-semibold text-white">{s.school}</h3>
+                <h3 className="text-base font-black uppercase tracking-wide text-white">{s.school}</h3>
                 <p className="text-sm text-zinc-300">{s.degree}</p>
                 <p className="mt-1 inline-flex items-center gap-1 text-xs text-zinc-400">
                   <Calendar size={14} /> {s.period}

@@ -9,7 +9,7 @@ const Hero = () => {
       {/* 3D Scene (full-cover) */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/OG17yM2eUIs8MUmA/scene.splinecode"
+          scene="https://prod.spline.design/JqBuM4DcZiGXqO-1/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
@@ -37,17 +37,17 @@ const Hero = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-emerald-200 backdrop-blur-sm"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-          Building AI/ML apps • Full-stack • CS @ UIUC (incoming)
+          AI/ML • Full‑Stack • CS @ UIUC (Incoming)
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, ease: 'easeOut', delay: 0.05 }}
-          className="mt-4 font-mono text-4xl font-bold uppercase leading-tight tracking-widest text-white sm:text-5xl md:text-6xl"
+          className="mt-4 font-sans text-5xl font-black uppercase leading-tight tracking-wider text-white sm:text-6xl md:text-7xl"
         >
           Owen Chen
         </motion.h1>
@@ -74,21 +74,21 @@ const Hero = () => {
             className="group inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-zinc-100 backdrop-blur-sm transition will-change-transform hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-[0_0_60px_-10px_rgba(16,185,129,0.5)]"
           >
             <Linkedin size={18} />
-            <span>LinkedIn</span>
+            <span className="font-black uppercase tracking-wide">LinkedIn</span>
           </a>
           <a
             href="mailto:owen4@illinois.edu"
             className="group inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-emerald-100 backdrop-blur-sm transition will-change-transform hover:-translate-y-0.5 hover:bg-emerald-400/20"
           >
             <Mail size={18} />
-            <span>Email</span>
+            <span className="font-black uppercase tracking-wide">Email</span>
           </a>
           <a
             href="tel:+16476138298"
             className="group inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-zinc-100 backdrop-blur-sm transition will-change-transform hover:-translate-y-0.5 hover:bg-white/10"
           >
             <Phone size={18} />
-            <span>(647) 613-8298</span>
+            <span className="font-black uppercase tracking-wide">(647) 613-8298</span>
           </a>
         </motion.div>
       </div>

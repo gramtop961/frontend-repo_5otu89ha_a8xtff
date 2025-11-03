@@ -20,7 +20,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
-        className="relative z-10 font-mono text-2xl font-semibold uppercase tracking-widest text-white sm:text-3xl"
+        className="relative z-10 font-sans text-2xl font-black uppercase tracking-wider text-white sm:text-3xl"
       >
         About
       </motion.h2>
@@ -44,10 +44,10 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-5 backdrop-blur-sm"
         >
-          <h3 className="font-mono text-sm font-semibold uppercase tracking-widest text-emerald-200">Languages</h3>
+          <h3 className="font-sans text-sm font-black uppercase tracking-wider text-emerald-200">Languages</h3>
           <div className="mt-3 flex flex-wrap gap-2 text-sm text-zinc-200">
             {['Rust', 'C++', 'Java', 'TypeScript/JavaScript', 'Python', 'Go', 'HTML5/CSS3'].map((t) => (
-              <span key={t} className="rounded-full border border-white/10 bg-black/40 px-2 py-1 text-xs text-zinc-300">{t}</span>
+              <span key={t} className="rounded-full border border-white/10 bg-black/40 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-zinc-300">{t}</span>
             ))}
           </div>
         </motion.div>
@@ -58,10 +58,10 @@ const About = () => {
           transition={{ duration: 0.55, delay: 0.05 }}
           className="rounded-xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm"
         >
-          <h3 className="font-mono text-sm font-semibold uppercase tracking-widest text-white">Frameworks & Libraries</h3>
+          <h3 className="font-sans text-sm font-black uppercase tracking-wider text-white">Frameworks & Libraries</h3>
           <div className="mt-3 flex flex-wrap gap-2 text-sm text-zinc-200">
             {['Vue.js', 'React.js', 'Node.js', 'Angular.js', 'FastAPI'].map((t) => (
-              <span key={t} className="rounded-full border border-white/10 bg-black/40 px-2 py-1 text-xs text-zinc-300">{t}</span>
+              <span key={t} className="rounded-full border border-white/10 bg-black/40 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-zinc-300">{t}</span>
             ))}
           </div>
         </motion.div>
@@ -72,10 +72,10 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="rounded-xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm"
         >
-          <h3 className="font-mono text-sm font-semibold uppercase tracking-widest text-white">Tools & Platforms</h3>
+          <h3 className="font-sans text-sm font-black uppercase tracking-wider text-white">Tools & Platforms</h3>
           <div className="mt-3 flex flex-wrap gap-2 text-sm text-zinc-200">
             {['Git', 'Docker', 'Twilio', 'AWS', 'MongoDB', 'Firebase'].map((t) => (
-              <span key={t} className="rounded-full border border-white/10 bg-black/40 px-2 py-1 text-xs text-zinc-300">{t}</span>
+              <span key={t} className="rounded-full border border-white/10 bg-black/40 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-zinc-300">{t}</span>
             ))}
           </div>
         </motion.div>

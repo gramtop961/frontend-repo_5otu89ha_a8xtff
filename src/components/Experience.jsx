@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Calendar, ExternalLink } from 'lucide-react';
+import { Briefcase, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const roles = [
@@ -42,32 +42,6 @@ const roles = [
   },
 ];
 
-const Research = () => (
-  <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm">
-    <h3 className="text-base font-semibold text-white">Research</h3>
-    <ul className="mt-3 space-y-3 text-sm text-zinc-300">
-      <li>
-        <span className="font-medium text-white">AI Alignment as a Principal–Agent Problem</span> — PPE / PhilML / ILIAD 2024. Modeled how reward-optimizing sycophantic agents can outperform aligned agents, highlighting misinterpretation risks.
-      </li>
-      <li>
-        <span className="font-medium text-white">Extending the Off-Switch Game</span> — LW 2024. Integrated dynamic goal-modification and trust calibration toward robust corrigibility.
-      </li>
-    </ul>
-  </div>
-);
-
-const Awards = () => (
-  <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm">
-    <h3 className="text-base font-semibold text-white">Awards</h3>
-    <ul className="mt-3 space-y-2 text-sm text-zinc-300">
-      <li>FIRST Robotics Championship Galileo Division Winner (Ranked 32/3500), 2024</li>
-      <li>University of Waterloo President’s Scholarship of Distinction — $5,000 (Top ~4.3%), 2025</li>
-      <li>Waterloo PCF Math Contest Certificate of Distinction — x3 (Top 25%)</li>
-      <li>FIRST Robotics Ontario Provincial Championship Semi-Finalists (Ranked 16/138), 2024</li>
-    </ul>
-  </div>
-);
-
 const Experience = () => {
   return (
     <section id="experience" className="relative mx-auto w-full max-w-6xl px-6 py-20">
@@ -76,7 +50,7 @@ const Experience = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
-        className="text-2xl font-semibold text-white sm:text-3xl"
+        className="font-sans text-2xl font-black uppercase tracking-wider text-white sm:text-3xl"
       >
         Experience
       </motion.h2>
@@ -98,7 +72,7 @@ const Experience = () => {
               </div>
               <div className="flex-1">
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <h3 className="font-mono text-base font-semibold tracking-wide text-white">
+                  <h3 className="font-sans text-base font-black uppercase tracking-wide text-white">
                     {r.org}
                   </h3>
                   <span className="inline-flex items-center gap-1 text-xs text-zinc-400">
@@ -112,7 +86,7 @@ const Experience = () => {
                 </ul>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {r.tech.map((t) => (
-                    <span key={t} className="rounded-full border border-white/10 bg-black/40 px-2 py-1 text-xs text-zinc-300">
+                    <span key={t} className="rounded-full border border-white/10 bg-black/40 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-zinc-300">
                       {t}
                     </span>
                   ))}
@@ -122,9 +96,6 @@ const Experience = () => {
           </motion.div>
         ))}
       </div>
-
-      <Research />
-      <Awards />
     </section>
   );
 };

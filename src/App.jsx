@@ -62,12 +62,12 @@ function App() {
 
       <footer className="mx-auto mt-10 w-full max-w-6xl px-6 py-10 text-center text-xs text-zinc-400">
         <div className="flex flex-col items-center justify-center gap-1">
-          <span className="font-mono tracking-widest text-zinc-300">owen4@illinois.edu • (647) 613-8298</span>
+          <span className="font-sans font-black uppercase tracking-widest text-zinc-200">owen4@illinois.edu • (647) 613-8298</span>
           <a
             href="https://www.linkedin.com/in/owen-chen-112382322/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-emerald-300 hover:text-emerald-200"
+            className="font-sans font-black uppercase tracking-wide text-emerald-300 hover:text-emerald-200"
           >
             LinkedIn
           </a>
